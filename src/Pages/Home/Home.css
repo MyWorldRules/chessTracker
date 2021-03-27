@@ -1,0 +1,44 @@
+.Home {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 92vh;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.opponentTextDiv {
+  flex: 0.05;
+}
+
+.opponentTextDiv > h1 {
+  color: var(--gray);
+  font-size: 4vh;
+}
+
+.widgets {
+  flex: 0.8;
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.totalWinsBar {
+  flex: 0.1;
+}
+
+.gamesWon {
+  position: relative;
+  width: 30%;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.topSection > h1 {
+  color: var(--gray);
+  font-size: 4vh;
+}

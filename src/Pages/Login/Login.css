@@ -1,0 +1,121 @@
+.background {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loginBox {
+  width: 500px;
+  height: 500px;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 30px;
+  display: flex;
+  overflow-y: hidden;
+  align-items: center;
+  flex-direction: column;
+}
+
+.circleBackground {
+  background-image: linear-gradient(90deg, #26e1c8, #0e52b7);
+  width: 500px;
+  height: 500px;
+  border-radius: 100%;
+  position: relative;
+  top: -220px;
+}
+
+.nameTitle {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  width: 200px;
+  height: 50px;
+  border-radius: 50px;
+  position: absolute;
+  background-color: white;
+  margin-top: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nameTitle > h3 {
+  color: var(--gray);
+  font-weight: normal;
+  font-size: 30px;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.signUpText {
+  position: absolute;
+  margin-top: 320px;
+}
+
+.signUpText > h3 {
+  color: var(--gray);
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.signInGoogle {
+  position: absolute;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background-color: white;
+  width: 300px;
+  height: 50px;
+  border-radius: 50px;
+  margin-top: 355px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  transition: all 0.2s ease;
+}
+
+.signInGoogle > h3 {
+  text-align: center;
+  color: var(--gray);
+  font-weight: normal;
+  font-size: 25px;
+}
+
+.react-icons {
+  font-size: 30px;
+  margin-right: 5px;
+}
+
+.signInGoogle:hover {
+  margin-top: 350px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 500px) {
+  .loginBox {
+    box-shadow: none;
+    width: 100vh;
+    height: 100vh;
+    border-radius: 0px;
+    overflow-x: hidden;
+  }
+  .circleBackground {
+    width: 600px;
+    height: 600px;
+    top: -220px;
+  }
+  .nameTitle {
+    margin-top: 350px;
+  }
+  .signUpText {
+    margin-top: 425px;
+  }
+  .signInGoogle {
+    margin-top: 460px;
+  }
+  .signInGoogle:hover {
+    margin-top: 450px;
+  }
+}

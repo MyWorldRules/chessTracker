@@ -1,0 +1,88 @@
+.saveGameDiv {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 30px;
+  width: 30vw;
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.topSectionSave {
+  width: 30vw;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.saveGameDiv > h1 {
+  color: var(--gray);
+  font-size: 4vh;
+}
+
+.whitePlayer,
+.blackPlayer {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 30px;
+  height: 15vh;
+  width: 25vw;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.blackPlayer {
+  background-color: black;
+}
+
+.whitePlayer > h1,
+.blackPlayer > h1 {
+  color: var(--gray);
+  font-size: 5vh;
+}
+
+.blackPlayer > h1 {
+  color: #e5e5e5;
+}
+
+.flip {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 20px;
+  height: 6vh;
+  width: 10vw;
+  background-color: #ddf7e8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flip > h3 {
+  color: var(--gray);
+  font-size: 2.5vh;
+}
+
+.gradientButton {
+  margin-top: 5vh;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 100px;
+  height: 7vh;
+  width: 17vw;
+  background-image: linear-gradient(45deg, #26e1c8, #0e52b7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gradientButton > h1 {
+  color: white;
+  font-size: 3.5vh;
+}
+
+.topSectionSave > h1 {
+  color: var(--gray);
+  font-size: 4vh;
+}
