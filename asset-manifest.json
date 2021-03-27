@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/chessTracker/static/css/main.5d13e36e.chunk.css",
-    "main.js": "/chessTracker/static/js/main.6e5f3c5e.chunk.js",
-    "main.js.map": "/chessTracker/static/js/main.6e5f3c5e.chunk.js.map",
-    "runtime-main.js": "/chessTracker/static/js/runtime-main.5d3cf8e9.js",
-    "runtime-main.js.map": "/chessTracker/static/js/runtime-main.5d3cf8e9.js.map",
-    "static/js/2.f73d026a.chunk.js": "/chessTracker/static/js/2.f73d026a.chunk.js",
-    "static/js/2.f73d026a.chunk.js.map": "/chessTracker/static/js/2.f73d026a.chunk.js.map",
-    "static/js/3.18edf35e.chunk.js": "/chessTracker/static/js/3.18edf35e.chunk.js",
-    "static/js/3.18edf35e.chunk.js.map": "/chessTracker/static/js/3.18edf35e.chunk.js.map",
+    "main.js": "/chessTracker/static/js/main.db7d3710.chunk.js",
+    "main.js.map": "/chessTracker/static/js/main.db7d3710.chunk.js.map",
+    "runtime-main.js": "/chessTracker/static/js/runtime-main.5c0ee537.js",
+    "runtime-main.js.map": "/chessTracker/static/js/runtime-main.5c0ee537.js.map",
+    "static/js/2.4ebe07ba.chunk.js": "/chessTracker/static/js/2.4ebe07ba.chunk.js",
+    "static/js/2.4ebe07ba.chunk.js.map": "/chessTracker/static/js/2.4ebe07ba.chunk.js.map",
+    "static/js/3.f8662be7.chunk.js": "/chessTracker/static/js/3.f8662be7.chunk.js",
+    "static/js/3.f8662be7.chunk.js.map": "/chessTracker/static/js/3.f8662be7.chunk.js.map",
     "index.html": "/chessTracker/index.html",
     "static/css/main.5d13e36e.chunk.css.map": "/chessTracker/static/css/main.5d13e36e.chunk.css.map",
-    "static/js/2.f73d026a.chunk.js.LICENSE.txt": "/chessTracker/static/js/2.f73d026a.chunk.js.LICENSE.txt"
+    "static/js/2.4ebe07ba.chunk.js.LICENSE.txt": "/chessTracker/static/js/2.4ebe07ba.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.5d3cf8e9.js",
-    "static/js/2.f73d026a.chunk.js",
+    "static/js/runtime-main.5c0ee537.js",
+    "static/js/2.4ebe07ba.chunk.js",
     "static/css/main.5d13e36e.chunk.css",
-    "static/js/main.6e5f3c5e.chunk.js"
+    "static/js/main.db7d3710.chunk.js"
   ]
 }
