@@ -1,28 +1,49 @@
-import React, {useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import styles from "./GameHistory.module.css";
 import HistoryElement from "./HistoryElement/HistoryElement";
-import {db} from "../../firebase"
+import { db, auth } from "../../firebase";
 import { useList } from "react-firebase-hooks/database";
+import { useAuthState } from "react-firebase-hooks/auth";
 import firebase from "firebase";
 
 function GameHistory() {
-  var tutorialsRef = db.ref("/6o0qwB5321bCU77Labw0TUQ5wuJ2");
-  const [snapshots, loading, error] = useList(tutorialsRef);
-  
+  const [user, userLoading] = useAuthState(auth);
+  var dbRef = db.ref("/" + user.uid);
+  const [snapshots, loading, error] = useList(dbRef);
+  const [delGame, setDelete] = useState("potato");
 
   return (
     <div className={styles.gameHistory}>
       <div className={styles.topSectionHistory}>
-        <HistoryElement isUser name="Tarun" date="3/11/2021" color="Black" />
         {!loading && snapshots ? (
           snapshots.map((game, index) => (
-            <HistoryElement isUser={game.val().isUser} name={game.val().name} date={game.val().date} color={game.val().color} />
+            <div
+              onClick={() => {
+                if (delGame === game.key) {
+                  setDelete("potato");
+                } else {
+                  setDelete(game.key);
+                }
+              }}
+              key={index}
+            >
+              <HistoryElement
+                isUser={game.val().isUser}
+                name={game.val().name}
+                date={game.val().date}
+                color={game.val().color}
+                isClicked={delGame === game.key}
+              />
+            </div>
           ))
         ) : (
           <h1>error</h1>
         )}
       </div>
-      <div className={styles.gradientButton}>
+      <div
+        className={styles.gradientButton}
+        onClick={() => dbRef.child(delGame).remove()}
+      >
         <h1>Deleted Selected</h1>
       </div>
     </div>
