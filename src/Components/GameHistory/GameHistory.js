@@ -9,6 +9,7 @@ import firebase from "firebase";
 function GameHistory() {
   const [user, userLoading] = useAuthState(auth);
   var dbRef = db.ref("/" + user.uid);
+
   const [snapshots, loading, error] = useList(dbRef);
   const [delGame, setDelete] = useState("potato");
 
