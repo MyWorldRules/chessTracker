@@ -28,14 +28,18 @@ function SaveGame() {
     if (winnerColor !== "potato") {
       const isUser =
         (winnerColor === "White" && whitePosition) ||
-        (winnerColor === "Black" && !whitePosition);
-      const name = isUser
-        ? user.displayName.charAt(0).toUpperCase() +
-          user.displayName
-            .substring(0, user.displayName.lastIndexOf(" "))
-            .toLowerCase()
-            .slice(1)
-        : opponent;
+        (winnerColor === "Black" && !whitePosition)
+          ? "user"
+          : "opponent";
+
+      const name =
+        isUser === "user"
+          ? user.displayName.charAt(0).toUpperCase() +
+            user.displayName
+              .substring(0, user.displayName.lastIndexOf(" "))
+              .toLowerCase()
+              .slice(1)
+          : opponent;
       dbRef.push({
         isUser: isUser,
         name: name,
