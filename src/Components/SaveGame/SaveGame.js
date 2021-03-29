@@ -44,12 +44,17 @@ function SaveGame() {
         color: winnerColor,
       });
     }
+    setWinnerColor("potato");
   };
   return (
     <div className={styles.saveGameDiv}>
       <div className={styles.topSectionSave}>
         <div
-          className={styles.whitePlayer}
+          className={
+            styles.whitePlayer +
+            " " +
+            (winnerColor === "White" ? styles.clicked : "")
+          }
           onClick={() => {
             winnerColor === "White"
               ? setWinnerColor("potato")
@@ -68,7 +73,11 @@ function SaveGame() {
         </div>
         <h1>vs</h1>
         <div
-          className={styles.blackPlayer}
+          className={
+            styles.blackPlayer +
+            " " +
+            (winnerColor === "Black" ? styles.clicked : "")
+          }
           onClick={() => {
             winnerColor === "Black"
               ? setWinnerColor("potato")
