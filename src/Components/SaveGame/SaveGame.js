@@ -43,7 +43,7 @@ function SaveGame() {
       dbRef.push({
         isUser: isUser,
         name: name,
-        timestamp: firebase.firestore.FieldValue.serverTimestamp(),
+        timestamp: firebase.database.ServerValue.TIMESTAMP,
         date: today,
         color: winnerColor,
       });
