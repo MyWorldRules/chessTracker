@@ -37,7 +37,9 @@ function GameHistory() {
             </div>
           ))
         ) : (
-          <h1>error</h1>
+          <div>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/7/7d/Pedro_luis_romani_ruiz.gif" />
+          </div>
         )}
       </div>
       <div
