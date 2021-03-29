@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { auth } from "./firebase";
 import Loading from "./Pages/Loading/Loading";
-import Navbar from "./Pages/Navbar/Navbar";
+import Navbar from "./Components/Navbar/Navbar";
 
 function App() {
   const [user, loading] = useAuthState(auth);
