@@ -9,15 +9,16 @@ import firebase from "firebase";
 function GameHistory() {
   const [user, userLoading] = useAuthState(auth);
   var dbRef = db.ref("/" + user.uid);
+  const dbQuery = dbRef.orderByChild("timestamp");
 
-  const [snapshots, loading, error] = useList(dbRef);
+  const [snapshots, loading, error] = useList(dbQuery);
   const [delGame, setDelete] = useState("potato");
 
   return (
     <div className={styles.gameHistory}>
       <div className={styles.topSectionHistory}>
         {!loading && snapshots ? (
-          snapshots.map((game, index) => (
+          snapshots.reverse().map((game, index) => (
             <div
               onClick={() => {
                 if (delGame === game.key) {
