@@ -24,6 +24,7 @@ function SaveGame() {
 
     today = mm + "/" + dd + "/" + yyyy;
     console.log(today);
+
     if (winnerColor !== "potato") {
       const isUser =
         (winnerColor === "White" && whitePosition) ||
@@ -53,7 +54,11 @@ function SaveGame() {
         >
           <h1>
             {whitePosition
-              ? user.displayName.substring(0, user.displayName.lastIndexOf(" "))
+              ? user.displayName.charAt(0).toUpperCase() +
+                user.displayName
+                  .substring(0, user.displayName.lastIndexOf(" "))
+                  .toLowerCase()
+                  .slice(1)
               : opponent}
           </h1>
         </div>
@@ -68,7 +73,11 @@ function SaveGame() {
         >
           <h1>
             {!whitePosition
-              ? user.displayName.substring(0, user.displayName.lastIndexOf(" "))
+              ? user.displayName.charAt(0).toUpperCase() +
+                user.displayName
+                  .substring(0, user.displayName.lastIndexOf(" "))
+                  .toLowerCase()
+                  .slice(1)
               : opponent}
           </h1>
         </div>
