@@ -21,7 +21,7 @@ function App() {
           <>
             <Navbar />
             <Switch>
-              <Route path="/" exact component={Home} />
+              <Route path="/chessTracker/home" exact component={Home} />
             </Switch>
           </>
         )}

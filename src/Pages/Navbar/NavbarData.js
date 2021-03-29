@@ -1,7 +1,7 @@
 export const NavbarData = [
   {
     title: "Home",
-    path: "/",
+    path: "/chessTracker/home",
   },
   {
     title: "Statistics",
