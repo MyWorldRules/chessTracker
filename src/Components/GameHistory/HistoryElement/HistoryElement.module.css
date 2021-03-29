@@ -14,8 +14,8 @@
 }
 
 .clicked {
-  background-color: #9921e8 !important;
-  background-image: linear-gradient(45deg, #f53844, #42378f) !important;
+  width: 26vw !important;
+  height: 11vh !important;
 }
 
 .bottomText {
@@ -31,14 +31,28 @@
 .userWin {
   background-color: #9921e8;
   background-image: linear-gradient(45deg, #5f72be, #9921e8);
+  cursor: pointer;
+}
+.userWin:hover {
+  background-image: linear-gradient(-45deg, #5f72be, #9921e8);
 }
 
 .opponentWin {
   background-color: #fc575e;
   background-image: linear-gradient(45deg, #fc575e, #f7b42c);
+  cursor: pointer;
+}
+.opponentWin:hover {
+  background-image: linear-gradient(-45deg, #fc575e, #f7b42c);
 }
 
 .draw {
   background-color: #485461;
   background-image: linear-gradient(45deg, #485461 0%, #28313b 74%);
+  cursor: pointer;
+}
+
+.draw:hover {
+  background-color: #485461;
+  background-image: linear-gradient(-45deg, #485461 0%, #28313b 74%);
 }
