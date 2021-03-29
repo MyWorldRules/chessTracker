@@ -30,7 +30,11 @@ function SaveGame() {
         (winnerColor === "White" && whitePosition) ||
         (winnerColor === "Black" && !whitePosition);
       const name = isUser
-        ? user.displayName.substring(0, user.displayName.lastIndexOf(" "))
+        ? user.displayName.charAt(0).toUpperCase() +
+          user.displayName
+            .substring(0, user.displayName.lastIndexOf(" "))
+            .toLowerCase()
+            .slice(1)
         : opponent;
       dbRef.push({
         isUser: isUser,
