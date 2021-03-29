@@ -14,9 +14,16 @@ function SaveGame() {
 
   const [winnerColor, setWinnerColor] = useState("potato"); //White
 
-  var dbRef = db.ref("/" + user.uid);
+  const dbRef = db.ref("/" + user.uid);
 
   const sendData = () => {
+    var today = new Date();
+    var dd = String(today.getDate()).padStart(2, "0");
+    var mm = String(today.getMonth() + 1).padStart(2, "0"); //January is 0!
+    var yyyy = today.getFullYear();
+
+    today = mm + "/" + dd + "/" + yyyy;
+    console.log(today);
     if (winnerColor !== "potato") {
       const isUser =
         (winnerColor === "White" && whitePosition) ||
@@ -27,7 +34,8 @@ function SaveGame() {
       dbRef.push({
         isUser: isUser,
         name: name,
-        date: "3/10/2021",
+        timestamp: firebase.firestore.FieldValue.serverTimestamp(),
+        date: today,
         color: winnerColor,
       });
     }
