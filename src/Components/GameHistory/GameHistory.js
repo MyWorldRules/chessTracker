@@ -21,10 +21,19 @@ function GameHistory() {
         {!loading && snapshots && reloadHistory === "x"
           ? setreloadHistory(snapshots.length)
           : ""}
+
         {!loading &&
         snapshots &&
         reloadHistory !== "x" &&
-        snapshots.length !== reloadHistory
+        snapshots.length === reloadHistory - 1
+          ? setreloadHistory(snapshots.length)
+          : ""}
+
+        {!loading &&
+        snapshots &&
+        reloadHistory !== "x" &&
+        snapshots.length !== reloadHistory &&
+        snapshots.length !== reloadHistory - 1
           ? window.location.reload()
           : ""}
         {console.log(reloadHistory)}
