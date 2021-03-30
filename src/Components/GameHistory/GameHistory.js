@@ -13,10 +13,21 @@ function GameHistory() {
 
   const [snapshots, loading, error] = useList(dbQuery);
   const [delGame, setDelete] = useState("potato");
+  const [reloadHistory, setreloadHistory] = useState("x");
 
   return (
     <div className={styles.gameHistory}>
       <div className={styles.topSectionHistory}>
+        {!loading && snapshots && reloadHistory === "x"
+          ? setreloadHistory(snapshots.length)
+          : ""}
+        {!loading &&
+        snapshots &&
+        reloadHistory !== "x" &&
+        snapshots.length !== reloadHistory
+          ? window.location.reload()
+          : ""}
+        {console.log(reloadHistory)}
         {!loading && snapshots ? (
           snapshots.reverse().map((game, index) => (
             <div
