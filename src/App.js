@@ -1,7 +1,7 @@
 import "./App.css";
 import Login from "./Pages/Login/Login";
 import Home from "./Pages/Home/Home";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { HashRouter as Router, Switch, Route } from "react-router-dom";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { auth } from "./firebase";
 import Loading from "./Pages/Loading/Loading";
