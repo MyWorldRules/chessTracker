@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/chessTracker/static/css/main.79315d33.chunk.css",
-    "main.js": "/chessTracker/static/js/main.971450a5.chunk.js",
-    "main.js.map": "/chessTracker/static/js/main.971450a5.chunk.js.map",
+    "main.js": "/chessTracker/static/js/main.a54849a0.chunk.js",
+    "main.js.map": "/chessTracker/static/js/main.a54849a0.chunk.js.map",
     "runtime-main.js": "/chessTracker/static/js/runtime-main.5c0ee537.js",
     "runtime-main.js.map": "/chessTracker/static/js/runtime-main.5c0ee537.js.map",
-    "static/js/2.074d81f5.chunk.js": "/chessTracker/static/js/2.074d81f5.chunk.js",
-    "static/js/2.074d81f5.chunk.js.map": "/chessTracker/static/js/2.074d81f5.chunk.js.map",
+    "static/js/2.a7b2690c.chunk.js": "/chessTracker/static/js/2.a7b2690c.chunk.js",
+    "static/js/2.a7b2690c.chunk.js.map": "/chessTracker/static/js/2.a7b2690c.chunk.js.map",
     "static/js/3.f8662be7.chunk.js": "/chessTracker/static/js/3.f8662be7.chunk.js",
     "static/js/3.f8662be7.chunk.js.map": "/chessTracker/static/js/3.f8662be7.chunk.js.map",
     "index.html": "/chessTracker/index.html",
     "static/css/main.79315d33.chunk.css.map": "/chessTracker/static/css/main.79315d33.chunk.css.map",
-    "static/js/2.074d81f5.chunk.js.LICENSE.txt": "/chessTracker/static/js/2.074d81f5.chunk.js.LICENSE.txt"
+    "static/js/2.a7b2690c.chunk.js.LICENSE.txt": "/chessTracker/static/js/2.a7b2690c.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.5c0ee537.js",
-    "static/js/2.074d81f5.chunk.js",
+    "static/js/2.a7b2690c.chunk.js",
     "static/css/main.79315d33.chunk.css",
-    "static/js/main.971450a5.chunk.js"
+    "static/js/main.a54849a0.chunk.js"
   ]
 }
