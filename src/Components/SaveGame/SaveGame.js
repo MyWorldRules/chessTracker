@@ -49,6 +49,7 @@ function SaveGame() {
       });
     }
     setWinnerColor("potato");
+    window.location.reload();
   };
   return (
     <div className={styles.saveGameDiv}>
