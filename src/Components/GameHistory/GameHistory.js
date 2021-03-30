@@ -29,26 +29,29 @@ function GameHistory() {
           : ""}
         {console.log(reloadHistory)}
         {!loading && snapshots ? (
-          snapshots.reverse().map((game, index) => (
-            <div
-              onClick={() => {
-                if (delGame === game.key) {
-                  setDelete("potato");
-                } else {
-                  setDelete(game.key);
-                }
-              }}
-              key={index}
-            >
-              <HistoryElement
-                isUser={game.val().isUser}
-                name={game.val().name}
-                date={game.val().date}
-                color={game.val().color}
-                isClicked={delGame === game.key}
-              />
-            </div>
-          ))
+          snapshots
+            .slice(0)
+            .reverse()
+            .map((game, index) => (
+              <div
+                onClick={() => {
+                  if (delGame === game.key) {
+                    setDelete("potato");
+                  } else {
+                    setDelete(game.key);
+                  }
+                }}
+                key={index}
+              >
+                <HistoryElement
+                  isUser={game.val().isUser}
+                  name={game.val().name}
+                  date={game.val().date}
+                  color={game.val().color}
+                  isClicked={delGame === game.key}
+                />
+              </div>
+            ))
         ) : (
           <div>
             <img src="https://upload.wikimedia.org/wikipedia/commons/7/7d/Pedro_luis_romani_ruiz.gif" />
