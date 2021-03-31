@@ -1,6 +1,7 @@
 import "./App.css";
 import Login from "./Pages/Login/Login";
 import Home from "./Pages/Home/Home";
+import Game from "./Pages/Game/Game";
 import { HashRouter as Router, Switch, Route } from "react-router-dom";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { auth } from "./firebase";
@@ -21,7 +22,8 @@ function App() {
           <>
             <Navbar />
             <Switch>
-              <Route path="/home" exact component={Home} />
+              <Route path="/home" component={Home} />
+              <Route path="/games" exact component={Game} />
             </Switch>
           </>
         )}

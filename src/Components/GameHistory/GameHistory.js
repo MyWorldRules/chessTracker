@@ -5,6 +5,7 @@ import { db, auth } from "../../firebase";
 import { useList } from "react-firebase-hooks/database";
 import { useAuthState } from "react-firebase-hooks/auth";
 import firebase from "firebase";
+import { useParams } from "react-router-dom";
 
 function GameHistory() {
   const [user, userLoading] = useAuthState(auth);
@@ -14,6 +15,8 @@ function GameHistory() {
   const [snapshots, loading, error] = useList(dbQuery);
   const [delGame, setDelete] = useState("potato");
 
+  let { id } = useParams();
+  console.log("id");
   return (
     <div className={styles.gameHistory}>
       <div className={styles.topSectionHistory}>

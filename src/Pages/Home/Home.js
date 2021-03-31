@@ -3,6 +3,7 @@ import "./Home.css";
 import SaveGame from "../../Components/SaveGame/SaveGame";
 import GamesWon from "../../Components/GamesWon/GamesWon";
 import GameHistory from "../../Components/GameHistory/GameHistory";
+
 function Home() {
   return (
     <div className="Home">
@@ -11,7 +12,6 @@ function Home() {
       </div>
       <div className="widgets">
         <SaveGame />
-
         <div className="gamesWon">
           <GamesWon isUser name="Tarun" wins="100" total="150" />
           <GamesWon name="Rohit" wins="50" total="150" />
