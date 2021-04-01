@@ -25,6 +25,7 @@ function App() {
             <Switch>
               <Route path={`/opponent-${idRegex}`} component={Home} />
               <Route path="/games" exact component={Game} />
+              <Route path="/" component={Game} />
             </Switch>
           </>
         )}

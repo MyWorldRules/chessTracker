@@ -7,7 +7,6 @@ import { getByDisplayValue } from "@testing-library/dom";
 import { useList } from "react-firebase-hooks/database";
 import { Link } from "react-router-dom";
 import { IoChevronBackCircle } from "react-icons/io5";
-import { useParams } from "react-router-dom";
 
 function Game() {
   const [user, userLoading] = useAuthState(auth);

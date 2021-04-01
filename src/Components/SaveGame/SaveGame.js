@@ -5,15 +5,11 @@ import { db, auth } from "../../firebase";
 import { useList } from "react-firebase-hooks/database";
 import { useAuthState } from "react-firebase-hooks/auth";
 
-function SaveGame() {
+function SaveGame({ userName, opponentName }) {
   const [user, userLoading] = useAuthState(auth);
-
   //If whitePosition is true, then the user is white
   const [whitePosition, setWhitePosition] = useState(true); //True
-  const opponent = "Rohit";
-
   const [winnerColor, setWinnerColor] = useState("potato"); //White
-
   var dbRef = db.ref(
     "/" +
       user.uid +
@@ -38,14 +34,7 @@ function SaveGame() {
           ? "user"
           : "opponent";
 
-      const name =
-        isUser === "user"
-          ? user.displayName.charAt(0).toUpperCase() +
-            user.displayName
-              .substring(0, user.displayName.lastIndexOf(" "))
-              .toLowerCase()
-              .slice(1)
-          : opponent;
+      const name = isUser === "user" ? userName : opponentName;
       dbRef.push({
         isUser: isUser,
         name: name,
@@ -72,15 +61,7 @@ function SaveGame() {
               : setWinnerColor("White");
           }}
         >
-          <h1>
-            {whitePosition
-              ? user.displayName.charAt(0).toUpperCase() +
-                user.displayName
-                  .substring(0, user.displayName.lastIndexOf(" "))
-                  .toLowerCase()
-                  .slice(1)
-              : opponent}
-          </h1>
+          <h1>{whitePosition ? userName : opponentName}</h1>
         </div>
         <h1>vs</h1>
         <div
@@ -95,15 +76,7 @@ function SaveGame() {
               : setWinnerColor("Black");
           }}
         >
-          <h1>
-            {!whitePosition
-              ? user.displayName.charAt(0).toUpperCase() +
-                user.displayName
-                  .substring(0, user.displayName.lastIndexOf(" "))
-                  .toLowerCase()
-                  .slice(1)
-              : opponent}
-          </h1>
+          <h1>{!whitePosition ? userName : opponentName}</h1>
         </div>
         <div
           className={styles.flip}
