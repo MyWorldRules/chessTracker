@@ -3,6 +3,7 @@ import { auth, provider } from "../../firebase";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
 import { NavbarData } from "./NavbarData";
+import { useAuthState } from "react-firebase-hooks/auth";
 
 function Navbar() {
   const logout = () => {
@@ -11,6 +12,7 @@ function Navbar() {
       console.log(error);
     });
   };
+  const [user, userLoading] = useAuthState(auth);
 
   const [sidebar, setSidebar] = useState(false);
 
@@ -39,7 +41,7 @@ function Navbar() {
         </li>
       </ul>
       <div className="profile">
-        <h1>Tarun Ravi</h1>
+        <h1>{user.displayName}</h1>
       </div>
       <div className="menu" onClick={showSideBar}>
         <div className={sidebar ? "line1 cross" : "line1"}></div>
