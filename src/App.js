@@ -10,7 +10,9 @@ import Navbar from "./Components/Navbar/Navbar";
 
 function App() {
   const [user, loading] = useAuthState(auth);
+
   const idRegex = "([0-9a-zA-Z_-]*)";
+
   if (loading) {
     return <Loading />;
   }
