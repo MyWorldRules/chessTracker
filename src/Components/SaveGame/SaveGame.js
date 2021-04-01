@@ -14,7 +14,13 @@ function SaveGame() {
 
   const [winnerColor, setWinnerColor] = useState("potato"); //White
 
-  const dbRef = db.ref("/" + user.uid);
+  var dbRef = db.ref(
+    "/" +
+      user.uid +
+      "/-" +
+      window.location.href.split("opponent-")[1] +
+      "/games"
+  );
 
   const sendData = () => {
     var today = new Date();

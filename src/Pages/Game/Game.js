@@ -7,6 +7,7 @@ import { getByDisplayValue } from "@testing-library/dom";
 import { useList } from "react-firebase-hooks/database";
 import { Link } from "react-router-dom";
 import { IoChevronBackCircle } from "react-icons/io5";
+import { useParams } from "react-router-dom";
 
 function Game() {
   const [user, userLoading] = useAuthState(auth);
@@ -30,7 +31,10 @@ function Game() {
           className={styles.topSection + " " + (addGame ? styles.hidden : "")}
         >
           {snapshots.map((game, index) => (
-            <Link to={game.key} style={{ textDecoration: "none" }}>
+            <Link
+              to={"/opponent" + game.key}
+              style={{ textDecoration: "none" }}
+            >
               <div className={styles.gameOption}>
                 <h1>{game.val().opponent}</h1>
               </div>
